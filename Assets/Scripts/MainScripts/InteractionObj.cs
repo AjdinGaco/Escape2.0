@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class InteractionObj : MonoBehaviour
 {
-    private Renderer _myRenderer;
+    public Renderer _myRenderer;
     /// <summary>
     /// The material to use when this object is inactive (not being gazed at).
     /// </summary>
@@ -17,7 +17,8 @@ public abstract class InteractionObj : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _myRenderer = GetComponent<Renderer>();
+        if (!_myRenderer)
+            _myRenderer = GetComponent<Renderer>();
         SetMaterial(false);
     }
     /// <summary>
@@ -58,9 +59,13 @@ public abstract class InteractionObj : MonoBehaviour
     /// </param>
     private void SetMaterial(bool gazedAt)
     {
+        Debug.Log("Changing Materials");
         if (InactiveMaterial != null && GazedAtMaterial != null)
         {
-            _myRenderer.material = gazedAt ? GazedAtMaterial : InactiveMaterial;
+            if (gazedAt)
+                _myRenderer.material = GazedAtMaterial;
+            else
+                _myRenderer.material = InactiveMaterial;
         }
     }
 }

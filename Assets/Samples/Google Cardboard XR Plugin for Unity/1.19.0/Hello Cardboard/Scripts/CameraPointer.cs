@@ -50,6 +50,7 @@ public class CameraPointer : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, _maxDistance))
         {
+            
             // GameObject detected in front of the camera.
             if (hit.transform.gameObject != _gazedAtObject && hit.transform.gameObject.tag == "Interactable")
             {

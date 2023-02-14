@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59fdd1d3e22911d4bbf2fb317c471451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _myRenderer: {fileID: 4991795936156706141}
   InactiveMaterial: {fileID: 2100000, guid: 923cfb6bbf7ed1f419ba9a60fe187e55, type: 2}
   GazedAtMaterial: {fileID: 2100000, guid: 020f790a3e8078a4bb8b36453e8003f6, type: 2}
   playerObj: {fileID: 0}
