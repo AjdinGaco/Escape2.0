@@ -34,6 +34,7 @@ public class CameraPointer : MonoBehaviour
     public Image _PointerImage;
     public Animator _PointerAnimator;
     public float _gazeDuration = 2f;
+    public bool AutoClickEnabled = false;
 
     private void Start()
     {
@@ -88,7 +89,7 @@ public class CameraPointer : MonoBehaviour
             _gazeTime = 0f;
         }
 
-        if (_gazing)
+        if (_gazing && AutoClickEnabled)
         {
             _fillAmount = (Time.time - _gazeTime) / _gazeDuration;
             if (Time.time - _gazeTime > _gazeDuration)
@@ -97,9 +98,9 @@ public class CameraPointer : MonoBehaviour
                 _gazing = false;
                 _fillAmount = 0f;
             }
+            _PointerImage.fillAmount = _fillAmount;
         }
 
-        _PointerImage.fillAmount = _fillAmount;
         _PointerAnimator.SetBool("Gaze", _gazing);
 
         // Checks for screen touches.

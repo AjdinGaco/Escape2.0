@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public GameObject CameraObj;
     private CharacterController characterController;
     private Vector3 movement;
+    public CameraPointer CameraPointer;
 
     [Tooltip("This should be the parent of all teleporting gaze markers. Only used with Gaze based gameplay")]
     public GameObject _gazeHelpers;
@@ -28,6 +29,7 @@ public class PlayerController : MonoBehaviour
         {
             characterController.enabled = false;
             _gazeHelpers.active = true;
+            CameraPointer.AutoClickEnabled = true;
         }
         else
         {
@@ -74,9 +76,6 @@ public class PlayerController : MonoBehaviour
         CameraObj.transform.Rotate(pitch, 0, 0);
         //Add limit to turn later
     }
-
-
-
     private int GetPlatform()
     {
         switch (Application.platform)
