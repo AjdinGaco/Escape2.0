@@ -4,5 +4,7 @@ using UnityEngine;
 
 public class GeneralEvent : RoomEvent
 {
-
+    /// <summary>
+    /// A general event that will be used for enabling, disabled objs. Not much use after that.
+    /// </summary>
 }

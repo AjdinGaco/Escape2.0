@@ -8,7 +8,7 @@ public abstract class RoomEvent : MonoBehaviour
     public List<GameObject> gameObjectsToDisableOnEnd;
     public bool condition = false;
 
-    public RoomDirector roomDirector;
+    private RoomDirector roomDirector;
     public void EventUpdate()
     {
         if (condition == true)
@@ -28,6 +28,10 @@ public abstract class RoomEvent : MonoBehaviour
 
     }
 
+    public void SetRoomDirector( RoomDirector _roomDirector)
+    {
+        roomDirector = _roomDirector;
+    }
 
     public void StartEvent()
     {

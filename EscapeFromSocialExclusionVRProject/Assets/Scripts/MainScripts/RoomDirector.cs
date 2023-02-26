@@ -21,7 +21,7 @@ public class RoomDirector : MonoBehaviour
         if (events[currentEvent])
         {
             roomEvent = events[currentEvent];
-            roomEvent.roomDirector = this;
+            roomEvent.SetRoomDirector(this);
             roomEvent.StartEvent();
         }
     }
