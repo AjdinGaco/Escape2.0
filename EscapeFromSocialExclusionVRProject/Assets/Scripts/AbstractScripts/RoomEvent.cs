@@ -4,11 +4,12 @@ using UnityEngine;
 
 public abstract class RoomEvent : MonoBehaviour
 {
+    public Sprite Sprite;
     public List<GameObject> gameObjectsToEnableOnStart;
     public List<GameObject> gameObjectsToDisableOnEnd;
     public bool condition = false;
 
-    private RoomDirector roomDirector;
+    public RoomDirector roomDirector;
     public void EventUpdate()
     {
         if (condition == true)
@@ -39,6 +40,9 @@ public abstract class RoomEvent : MonoBehaviour
         {
             go.gameObject.active = true;
         }
+        //Check if the event has a sprite it needs to show to player
+        if (Sprite)
+            roomDirector.PopupMaster.PopUpImage(Sprite);
         OnStart();
     }
     /// <summary>
@@ -47,6 +51,8 @@ public abstract class RoomEvent : MonoBehaviour
     public virtual void OnStart()
     {
         //Custom Code
+        //if nothing is filled it will just complete it once and move on
+        condition = true;
     }
     public void EndEvent()
     {

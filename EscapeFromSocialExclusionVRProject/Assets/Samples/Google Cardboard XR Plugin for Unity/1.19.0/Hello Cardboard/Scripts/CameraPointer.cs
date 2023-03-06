@@ -56,7 +56,10 @@ public class CameraPointer : MonoBehaviour
             if (hit.transform.gameObject != _gazedAtObject && hit.transform.gameObject.tag == "Interactable")
             {
                 // New GameObject.
-                _gazedAtObject?.SendMessage("OnPointerExit");
+                if (_gazedAtObject != null)
+                {
+                    _gazedAtObject?.SendMessage("OnPointerExit");
+                }
                 _gazedAtObject = hit.transform.gameObject;
                 _gazedAtObject.SendMessage("OnPointerEnter");
 
@@ -99,6 +102,10 @@ public class CameraPointer : MonoBehaviour
                 _fillAmount = 0f;
             }
             _PointerImage.fillAmount = _fillAmount;
+        }
+        if (_gazing && Input.GetMouseButtonDown(0))
+        {
+            _gazedAtObject.SendMessage("OnPointerClick");
         }
 
         _PointerAnimator.SetBool("Gaze", _gazing);

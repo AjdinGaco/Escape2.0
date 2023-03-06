@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class RoomDirector : MonoBehaviour
 {
-    
+    public PopupMaster PopupMaster;
     public List<RoomEvent> events = new List<RoomEvent>();
     private RoomEvent roomEvent;
+
     public int currentEvent = -1;
 
     void Start()
@@ -15,10 +16,8 @@ public class RoomDirector : MonoBehaviour
     }
     private void NextEvent()
     {
-
-
         currentEvent += 1;
-        if (events[currentEvent])
+        if (events[currentEvent] != null)
         {
             roomEvent = events[currentEvent];
             roomEvent.SetRoomDirector(this);
@@ -27,7 +26,8 @@ public class RoomDirector : MonoBehaviour
     }
     public void CurrentEventDone()
     {
-        NextEvent();
+        if (currentEvent + 1 < events.Count+1)
+            NextEvent();
     }
 
     // Update is called once per frame

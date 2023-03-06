@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class RoomPuzzle : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public RoomDirector roomDirector;
+    public bool completion = false;
+    public virtual void Clicked()
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
