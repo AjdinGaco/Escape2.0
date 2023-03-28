@@ -59,7 +59,6 @@ public abstract class InteractionObj : MonoBehaviour
     /// </param>
     private void SetMaterial(bool gazedAt)
     {
-        Debug.Log("Changing Materials");
         if (InactiveMaterial != null && GazedAtMaterial != null)
         {
             if (gazedAt)

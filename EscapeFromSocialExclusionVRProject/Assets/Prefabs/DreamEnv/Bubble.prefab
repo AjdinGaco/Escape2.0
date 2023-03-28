@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3034121710645992933}
   - component: {fileID: 8523258000062500126}
   - component: {fileID: 6790323204604778797}
-  - component: {fileID: 8482033294567195661}
+  - component: {fileID: 3487887758326880244}
   m_Layer: 0
   m_Name: Bubble
   m_TagString: Interactable
@@ -99,7 +99,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8482033294567195661
+--- !u!114 &3487887758326880244
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,13 +108,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 984933797425258134}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29a3cb3097c228b4daaa91cbeaa7e2ae, type: 3}
+  m_Script: {fileID: 11500000, guid: ee90f3806de0c8c4dae232c538f3274e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _myRenderer: {fileID: 8523258000062500126}
-  InactiveMaterial: {fileID: 2100000, guid: 5b6152639a8bf43f384b5143df06b608, type: 2}
-  GazedAtMaterial: {fileID: 2100000, guid: 020f790a3e8078a4bb8b36453e8003f6, type: 2}
-  SceneNum: 0
+  spawnObj: {fileID: 4601503351174776086, guid: f8d02916f5cc91c45b93a8eab8f3761e, type: 3}
 --- !u!1 &7781046440853022559
 GameObject:
   m_ObjectHideFlags: 0
