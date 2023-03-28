@@ -26,7 +26,7 @@ using UnityEngine.UI;
 /// </summary>
 public class CameraPointer : MonoBehaviour
 {
-    private const float _maxDistance = 10;
+    private const float _maxDistance = 50;
     private GameObject _gazedAtObject = null;
     private float _gazeTime = 0f;
     public bool _gazing = false;
