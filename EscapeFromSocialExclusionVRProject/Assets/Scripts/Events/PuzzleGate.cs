@@ -11,6 +11,6 @@ public class PuzzleGate : RoomEvent
     public override void OnUpdate()
     {
         if (roomPuzzle.completion)
-            condition = true;
+            isConditionMet = true;
     }
 }

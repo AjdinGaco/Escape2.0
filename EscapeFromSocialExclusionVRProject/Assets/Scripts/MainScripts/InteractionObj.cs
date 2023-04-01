@@ -1,46 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class InteractionObj : MonoBehaviour
 {
-    public Renderer _myRenderer;
-    /// <summary>
-    /// The material to use when this object is inactive (not being gazed at).
-    /// </summary>
-    public Material InactiveMaterial;
+    private Renderer _myRenderer;
+    private Material _originalMaterial;
+    private Material _outlinedMaterial;
 
-    /// <summary>
-    /// The material to use when this object is active (gazed at).
-    /// </summary>
-    public Material GazedAtMaterial;
-    // Start is called before the first frame update
     void Start()
     {
-        if (!_myRenderer)
-            _myRenderer = GetComponent<Renderer>();
-        SetMaterial(false);
+        _myRenderer = GetComponent<Renderer>();
+        if (_myRenderer != null)
+        {
+            _originalMaterial = _myRenderer.material;
+            _outlinedMaterial = new Material(_originalMaterial);
+            _outlinedMaterial.shader = Shader.Find("Custom/OutlineShader");
+            SetMaterial(false);
+        }
     }
-    /// <summary>
-    /// This method is called by the Main Camera when it starts gazing at this GameObject.
-    /// </summary>
+
     public void OnPointerEnter()
     {
         SetMaterial(true);
     }
 
-    /// <summary>
-    /// This method is called by the Main Camera when it stops gazing at this GameObject.
-    /// </summary>
     public void OnPointerExit()
     {
         SetMaterial(false);
     }
 
-    /// <summary>
-    /// This method is called by the Main Camera when it is gazing at this GameObject and the screen
-    /// is touched.
-    /// </summary>
     public void OnPointerClick()
     {
         ClickFunction();
@@ -50,21 +37,31 @@ public abstract class InteractionObj : MonoBehaviour
     {
 
     }
-    /// <summary>
-    /// Sets this instance's material according to gazedAt status.
-    /// </summary>
-    ///
-    /// <param name="gazedAt">
-    /// Value `true` if this object is being gazed at, `false` otherwise.
-    /// </param>
+
     private void SetMaterial(bool gazedAt)
     {
-        if (InactiveMaterial != null && GazedAtMaterial != null)
+        if (_myRenderer == null) return;
+
+        Material inactiveMaterial = _originalMaterial;
+        Material activeMaterial = _outlinedMaterial;
+
+        if (!gazedAt)
         {
-            if (gazedAt)
-                _myRenderer.material = GazedAtMaterial;
-            else
-                _myRenderer.material = InactiveMaterial;
+            // Set the material to the original material if not gazed at
+            _myRenderer.material = inactiveMaterial;
+            return;
         }
+
+        // Create a new material with only the outline
+        Material outlineMaterial = new Material(_outlinedMaterial);
+        outlineMaterial.SetFloat("_Outline", _outlinedMaterial.GetFloat("_Outline"));
+        outlineMaterial.SetColor("_Color", _outlinedMaterial.GetColor("_OutlineColor"));
+        outlineMaterial.SetColor("_OutlineColor", _outlinedMaterial.GetColor("_OutlineColor"));
+        outlineMaterial.mainTexture = _outlinedMaterial.mainTexture;
+        outlineMaterial.SetTexture("_ToonShade", _outlinedMaterial.GetTexture("_ToonShade"));
+
+        // Set the material to the outline material
+        _myRenderer.material = outlineMaterial;
     }
+
 }

@@ -1,22 +1,3 @@
-//-----------------------------------------------------------------------
-// <copyright file="CameraPointer.cs" company="Google LLC">
-// Copyright 2020 Google LLC
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-// </copyright>
-//-----------------------------------------------------------------------
-
-using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -26,44 +7,40 @@ using UnityEngine.UI;
 /// </summary>
 public class CameraPointer : MonoBehaviour
 {
-    private const float _maxDistance = 50;
+    private const float _maxDistance = 50f;
     private GameObject _gazedAtObject = null;
     private float _gazeTime = 0f;
-    public bool _gazing = false;
+    private bool _gazing = false;
     private float _fillAmount = 0f;
-    public Image _PointerImage;
-    public Animator _PointerAnimator;
+    public GameObject _ringPrefab;
+    private GameObject _ring;
     public float _gazeDuration = 2f;
-    public bool AutoClickEnabled = false;
-
-    private void Start()
-    {
-    }
-
+    public bool AutoClickEnabled = true;
 
     /// <summary>
     /// Update is called once per frame.
     /// </summary>
     public void Update()
     {
-        // Casts ray towards camera's forward direction, to detect if a GameObject is being gazed
-        // at.
+        // Casts ray towards camera's forward direction, to detect if a GameObject is being gazed at.
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, _maxDistance))
         {
-            
             // GameObject detected in front of the camera.
             if (hit.transform.gameObject != _gazedAtObject && hit.transform.gameObject.tag == "Interactable")
             {
                 // New GameObject.
                 if (_gazedAtObject != null)
                 {
-                    _gazedAtObject?.SendMessage("OnPointerExit");
+                    _gazedAtObject.SendMessage("OnPointerExit");
                 }
                 _gazedAtObject = hit.transform.gameObject;
                 _gazedAtObject.SendMessage("OnPointerEnter");
 
-                //Gaze
+                // Create ring.
+                CreateRing(_gazedAtObject.transform.localScale.magnitude);
+
+                // Gaze.
                 _gazeTime = Time.time;
                 _gazing = true;
             }
@@ -71,9 +48,10 @@ public class CameraPointer : MonoBehaviour
             {
                 if (_gazedAtObject)
                 {
-                    _gazedAtObject?.SendMessage("OnPointerExit");
+                    _gazedAtObject.SendMessage("OnPointerExit");
                     _gazedAtObject = null;
                 }
+                DestroyRing();
                 _gazing = false;
                 _fillAmount = 0f;
                 _gazeTime = 0f;
@@ -84,9 +62,10 @@ public class CameraPointer : MonoBehaviour
             // No GameObject detected in front of the camera.
             if (_gazedAtObject && _gazedAtObject.GetComponent<InteractionObj>())
             {
-                _gazedAtObject?.SendMessage("OnPointerExit");
+                _gazedAtObject.SendMessage("OnPointerExit");
                 _gazedAtObject = null;
             }
+            DestroyRing();
             _gazing = false;
             _fillAmount = 0f;
             _gazeTime = 0f;
@@ -101,14 +80,12 @@ public class CameraPointer : MonoBehaviour
                 _gazing = false;
                 _fillAmount = 0f;
             }
-            _PointerImage.fillAmount = _fillAmount;
+            UpdateRing(_fillAmount);
         }
         if (_gazing && Input.GetMouseButtonDown(0))
         {
             _gazedAtObject.SendMessage("OnPointerClick");
         }
-
-        _PointerAnimator.SetBool("Gaze", _gazing);
 
         // Checks for screen touches.
         if (Google.XR.Cardboard.Api.IsTriggerPressed)
@@ -116,17 +93,46 @@ public class CameraPointer : MonoBehaviour
             _gazedAtObject?.SendMessage("OnPointerClick");
         }
     }
-    private IEnumerator CheckGaze()
-    {
-        while (_gazedAtObject != null)
-        {
-            if (Time.time - _gazeTime >= 2)
-            {
-                _gazedAtObject.SendMessage("OnPointerClick");
-                yield break;
-            }
 
-            yield return null;
+    /// <summary>
+    /// Creates a ring based on the size of the object being gazed at.
+    /// </summary>
+    /// <param name="size">The size of the object being gazed at.</param>
+    /// 
+    private RingController ringController;
+    private void CreateRing(float size)
+    {
+        DestroyRing();
+        _ring = Instantiate(_ringPrefab, _gazedAtObject.transform.position, Quaternion.identity);
+        _ring.transform.localScale = new Vector3(1, 1, 1);
+        _ring.transform.LookAt(this.transform);
+        // Set up the ring's image fill amount
+        Image ringImage = _ring.GetComponent<Image>();
+        if (ringImage != null)
+        {
+            ringImage.type = Image.Type.Filled;
+            ringImage.fillMethod = Image.FillMethod.Radial360;
+            ringImage.fillOrigin = (int)Image.Origin360.Top;
+            ringImage.fillAmount = 0f;
+        }
+        ringController = _ring.GetComponent<RingController>();
+        Canvas canvas = _ring.GetComponent<Canvas>();
+        canvas.sortingOrder = 999;
+    }
+
+    private void UpdateRing(float fillAmount)
+    {
+        _ring.transform.LookAt(this.transform);
+        ringController.Fill.fillAmount = fillAmount;
+        
+    }
+
+    private void DestroyRing()
+    {
+        if (_ring != null)
+        {
+            Destroy(_ring);
+            _ring = null;
         }
     }
 }

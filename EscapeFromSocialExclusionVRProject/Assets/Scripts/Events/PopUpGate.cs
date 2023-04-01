@@ -13,7 +13,7 @@ public class PopUpGate : RoomEvent
     {
         if (roomDirector.PopupMaster.popupObj == null)
         {
-            condition = true;
+            isConditionMet = true;
         }
     }
 }

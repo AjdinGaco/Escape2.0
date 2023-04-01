@@ -4,37 +4,46 @@ using UnityEngine;
 
 public class RoomDirector : MonoBehaviour
 {
-    public PopupMaster PopupMaster;
-    public List<RoomEvent> events = new List<RoomEvent>();
-    private RoomEvent roomEvent;
+    [SerializeField] private PopupMaster popupMaster;
+    [SerializeField] private List<RoomEvent> events;
 
-    public int currentEvent = -1;
+    private int currentEventIndex = -1;
 
-    void Start()
+    private void Start()
     {
-        NextEvent();
+        StartNextEvent();
     }
-    private void NextEvent()
+
+    private void Update()
     {
-        currentEvent += 1;
-        if (events[currentEvent] != null)
+        if (currentEventIndex >= 0 && currentEventIndex < events.Count)
         {
-            roomEvent = events[currentEvent];
-            roomEvent.SetRoomDirector(this);
-            roomEvent.StartEvent();
+            events[currentEventIndex].EventUpdate();
         }
     }
-    public void CurrentEventDone()
+
+    private void StartNextEvent()
     {
-        if (currentEvent + 1 < events.Count+1)
-            NextEvent();
+        currentEventIndex++;
+        if (currentEventIndex < events.Count)
+        {
+            RoomEvent nextEvent = events[currentEventIndex];
+            nextEvent.SetRoomDirector(this);
+            nextEvent.StartEvent();
+        }
+        else
+        {
+            Debug.Log("All events completed!");
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void CurrentEventDone()
     {
+        StartNextEvent();
+    }
 
-        if (roomEvent)
-            roomEvent.EventUpdate();
+    public PopupMaster PopupMaster
+    {
+        get { return popupMaster; }
     }
 }

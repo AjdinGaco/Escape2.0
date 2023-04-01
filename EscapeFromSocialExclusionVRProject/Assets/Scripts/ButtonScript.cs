@@ -2,20 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ButtonScript : ObjectController
+public class ButtonScript : InteractionObj
 {
     public RoomPuzzle roomPuzzle;
     public bool clickstatus = false;
-    public override void OnPointerClick()
+    public override void ClickFunction()
     {
         clickstatus = true;
         roomPuzzle.SendMessage("Clicked");
-    }
-    public override void SetMaterial(bool gazedAt)
-    {
-        if (clickstatus)
-            base.SetMaterial(true);
-        else
-            base.SetMaterial(gazedAt);
     }
 }

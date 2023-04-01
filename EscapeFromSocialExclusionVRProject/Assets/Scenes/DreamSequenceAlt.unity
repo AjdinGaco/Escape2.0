@@ -325,7 +325,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 984933797425258134, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1199877604637985248, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
       propertyPath: m_RootOrder
@@ -383,6 +383,10 @@ PrefabInstance:
       propertyPath: playerCam
       value: 
       objectReference: {fileID: 1963840711}
+    - target: {fileID: 8523258000062500126, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: be2c38c1d71f6204bbd3901c1d6551b6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
 --- !u!1 &1270653798 stripped
@@ -402,9 +406,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a22587139dfd304c9a3c079dac1417c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _myRenderer: {fileID: 0}
-  InactiveMaterial: {fileID: 2100000, guid: 5b6152639a8bf43f384b5143df06b608, type: 2}
-  GazedAtMaterial: {fileID: 2100000, guid: 020f790a3e8078a4bb8b36453e8003f6, type: 2}
   GameObjectToEnable: {fileID: 1889371444}
   DestroyOnClick: 1
 --- !u!114 &1270653804
@@ -438,7 +439,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 984933797425258134, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1199877604637985248, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
       propertyPath: m_RootOrder
@@ -524,9 +525,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4ad2e2cfd1da54bb2ea8ffceab2b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _myRenderer: {fileID: 0}
-  InactiveMaterial: {fileID: 2100000, guid: be2c38c1d71f6204bbd3901c1d6551b6, type: 2}
-  GazedAtMaterial: {fileID: 2100000, guid: c766bf04b74219542b5cd3788a92aee3, type: 2}
   SceneNum: 1
 --- !u!114 &1607957537
 MonoBehaviour:
@@ -558,9 +556,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a22587139dfd304c9a3c079dac1417c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _myRenderer: {fileID: 0}
-  InactiveMaterial: {fileID: 2100000, guid: 5b6152639a8bf43f384b5143df06b608, type: 2}
-  GazedAtMaterial: {fileID: 2100000, guid: 020f790a3e8078a4bb8b36453e8003f6, type: 2}
   GameObjectToEnable: {fileID: 1270653798}
   DestroyOnClick: 1
 --- !u!114 &1651493950
@@ -683,7 +678,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 984933797425258134, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1199877604637985248, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
       propertyPath: m_RootOrder
@@ -741,6 +736,10 @@ PrefabInstance:
       propertyPath: playerCam
       value: 
       objectReference: {fileID: 1963840711}
+    - target: {fileID: 8523258000062500126, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: be2c38c1d71f6204bbd3901c1d6551b6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
 --- !u!1 &1889371444 stripped
@@ -760,9 +759,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a22587139dfd304c9a3c079dac1417c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _myRenderer: {fileID: 0}
-  InactiveMaterial: {fileID: 2100000, guid: 5b6152639a8bf43f384b5143df06b608, type: 2}
-  GazedAtMaterial: {fileID: 2100000, guid: 020f790a3e8078a4bb8b36453e8003f6, type: 2}
   GameObjectToEnable: {fileID: 1607957535}
   DestroyOnClick: 1
 --- !u!114 &1889371450
@@ -5671,5 +5667,9 @@ PrefabInstance:
       propertyPath: playerCam
       value: 
       objectReference: {fileID: 1963840711}
+    - target: {fileID: 8523258000062500126, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: be2c38c1d71f6204bbd3901c1d6551b6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
