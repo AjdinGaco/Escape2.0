@@ -14,6 +14,7 @@ public class ImagePuzzle : RoomPuzzle
         {
             int randomRotation = Random.Range(0, 4) * 90;
             child.transform.rotation = Quaternion.Euler(0f, 0f, randomRotation);
+            child.GetComponent<ButtonScript>().roomPuzzle = this;
         }
     }
 

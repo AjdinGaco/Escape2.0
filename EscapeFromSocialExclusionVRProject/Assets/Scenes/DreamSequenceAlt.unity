@@ -325,7 +325,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 984933797425258134, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1199877604637985248, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
       propertyPath: m_RootOrder
@@ -406,6 +406,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a22587139dfd304c9a3c079dac1417c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OutlineMode: 3
+  ringSizeOverride: 0
   GameObjectToEnable: {fileID: 1889371444}
   DestroyOnClick: 1
 --- !u!114 &1270653804
@@ -439,7 +441,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 984933797425258134, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1199877604637985248, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
       propertyPath: m_RootOrder
@@ -525,6 +527,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4ad2e2cfd1da54bb2ea8ffceab2b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OutlineMode: 3
+  ringSizeOverride: 0
   SceneNum: 1
 --- !u!114 &1607957537
 MonoBehaviour:
@@ -556,6 +560,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a22587139dfd304c9a3c079dac1417c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OutlineMode: 3
+  ringSizeOverride: 0
   GameObjectToEnable: {fileID: 1270653798}
   DestroyOnClick: 1
 --- !u!114 &1651493950
@@ -678,7 +684,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 984933797425258134, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1199877604637985248, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
       propertyPath: m_RootOrder
@@ -759,6 +765,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a22587139dfd304c9a3c079dac1417c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OutlineMode: 3
+  ringSizeOverride: 0
   GameObjectToEnable: {fileID: 1607957535}
   DestroyOnClick: 1
 --- !u!114 &1889371450
@@ -1115,9 +1123,9 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     startSize:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 50
-      minScalar: 1
+      minMaxState: 3
+      scalar: 200
+      minScalar: 50
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1168,7 +1176,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -1221,7 +1229,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeZ:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:

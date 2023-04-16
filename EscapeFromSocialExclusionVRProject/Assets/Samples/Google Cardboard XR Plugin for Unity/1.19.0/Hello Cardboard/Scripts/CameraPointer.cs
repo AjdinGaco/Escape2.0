@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class CameraPointer : MonoBehaviour
 {
     private const float _maxDistance = 50f;
-    private GameObject _gazedAtObject = null;
+    public GameObject _gazedAtObject = null;
     private float _gazeTime = 0f;
     private bool _gazing = false;
     private float _fillAmount = 0f;
@@ -71,26 +71,29 @@ public class CameraPointer : MonoBehaviour
             _gazeTime = 0f;
         }
 
-        if (_gazing && AutoClickEnabled)
+        if (_gazedAtObject)
         {
-            _fillAmount = (Time.time - _gazeTime) / _gazeDuration;
-            if (Time.time - _gazeTime > _gazeDuration)
+            if (_gazing && AutoClickEnabled)
+            {
+                _fillAmount = (Time.time - _gazeTime) / _gazeDuration;
+                if (Time.time - _gazeTime > _gazeDuration)
+                {
+                    _gazedAtObject.SendMessage("OnPointerClick");
+                    _gazing = false;
+                    _fillAmount = 0f;
+                }
+                UpdateRing(_fillAmount);
+            }
+            if (_gazing && Input.GetMouseButtonDown(0))
             {
                 _gazedAtObject.SendMessage("OnPointerClick");
-                _gazing = false;
-                _fillAmount = 0f;
             }
-            UpdateRing(_fillAmount);
-        }
-        if (_gazing && Input.GetMouseButtonDown(0))
-        {
-            _gazedAtObject.SendMessage("OnPointerClick");
-        }
 
-        // Checks for screen touches.
-        if (Google.XR.Cardboard.Api.IsTriggerPressed)
-        {
-            _gazedAtObject?.SendMessage("OnPointerClick");
+            // Checks for screen touches.
+            if (Google.XR.Cardboard.Api.IsTriggerPressed)
+            {
+                _gazedAtObject?.SendMessage("OnPointerClick");
+            }
         }
     }
 
@@ -102,9 +105,13 @@ public class CameraPointer : MonoBehaviour
     private RingController ringController;
     private void CreateRing(float size)
     {
+        if (size < 0.7f)
+            size = 0.7f;
+        if (_gazedAtObject.GetComponent<InteractionObj>().ringSizeOverride > 0f)
+            size = _gazedAtObject.GetComponent<InteractionObj>().ringSizeOverride;
         DestroyRing();
         _ring = Instantiate(_ringPrefab, _gazedAtObject.transform.position, Quaternion.identity);
-        _ring.transform.localScale = new Vector3(1, 1, 1);
+        _ring.transform.localScale = new Vector3(size, size, size);
         _ring.transform.LookAt(this.transform);
         // Set up the ring's image fill amount
         Image ringImage = _ring.GetComponent<Image>();
@@ -124,7 +131,6 @@ public class CameraPointer : MonoBehaviour
     {
         _ring.transform.LookAt(this.transform);
         ringController.Fill.fillAmount = fillAmount;
-        
     }
 
     private void DestroyRing()
