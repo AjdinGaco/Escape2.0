@@ -46,6 +46,7 @@ public class WordPuzzleSearch : RoomPuzzle
             {
                 newTextObject.AddComponent<ButtonScript>();
                 newTextObject.GetComponent<ButtonScript>().roomPuzzle = this;
+                newTextObject.GetComponent<ButtonScript>().gazeDurationOverride = 0.5f;
                 newTextObject.AddComponent<BoxCollider>();
                 newTextObject.GetComponent<BoxCollider>().size = new Vector3(20, 10, 10);
                 newTextObject.tag = "Interactable";

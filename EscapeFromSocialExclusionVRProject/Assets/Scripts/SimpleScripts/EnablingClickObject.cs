@@ -8,7 +8,12 @@ public class EnablingClickObject : InteractionObj
     public bool DestroyOnClick = false;
     public override void ClickFunction()
     {
-        GameObjectToEnable.SetActive(true);
+        if (GameObjectToEnable.active)
+            GameObjectToEnable.SetActive(false);
+        else
+            GameObjectToEnable.SetActive(true);
+
+
         if (DestroyOnClick)
             Destroy(gameObject);
     }

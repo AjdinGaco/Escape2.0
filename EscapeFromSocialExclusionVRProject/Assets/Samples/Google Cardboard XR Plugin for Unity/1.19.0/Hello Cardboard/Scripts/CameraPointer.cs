@@ -15,6 +15,7 @@ public class CameraPointer : MonoBehaviour
     public GameObject _ringPrefab;
     private GameObject _ring;
     public float _gazeDuration = 2f;
+    private float _gazeDutationOriginal;
     public bool AutoClickEnabled = true;
 
     /// <summary>
@@ -41,6 +42,11 @@ public class CameraPointer : MonoBehaviour
                 CreateRing(_gazedAtObject.transform.localScale.magnitude);
 
                 // Gaze.
+                if (_gazedAtObject.GetComponent<InteractionObj>().gazeDurationOverride != 0)
+                {
+                    _gazeDutationOriginal = _gazeDuration;
+                    _gazeDuration = _gazedAtObject.GetComponent<InteractionObj>().gazeDurationOverride;
+                }
                 _gazeTime = Time.time;
                 _gazing = true;
             }
@@ -52,9 +58,12 @@ public class CameraPointer : MonoBehaviour
                     _gazedAtObject = null;
                 }
                 DestroyRing();
+
+                _gazeDuration = _gazeDutationOriginal;
                 _gazing = false;
                 _fillAmount = 0f;
                 _gazeTime = 0f;
+
             }
         }
         else

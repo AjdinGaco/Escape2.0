@@ -37,7 +37,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.000069999995, y: 3.062065}
+  m_AnchoredPosition: {x: -0.000061035156, y: 3.0620728}
   m_SizeDelta: {x: 2.7411, y: 1.75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &7307624096369320378
@@ -113,3 +113,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc63a55b4e9a85a4090300fee465fc16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roomDirector: {fileID: 0}
+  completion: 0
+  textPrefab: {fileID: 5389720119821628816, guid: aaa63952700c5cd40af8b3cabc0882ce, type: 3}
+  spawnRadius: 100
+  importantWords: []
+  unimportantWords: []
