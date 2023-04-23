@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RoomDirector : MonoBehaviour
 {
+    public GameObject playerObj;
     [SerializeField] private PopupMaster popupMaster;
     [SerializeField] private List<RoomEvent> events;
 
