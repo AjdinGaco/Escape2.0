@@ -113,7 +113,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ebe4c5b92bda0b46a67da898b0e7a10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roomDirector: {fileID: 0}
+  completion: 0
   rows: 3
   columns: 3
   padding: 0
   image: {fileID: 21300000, guid: 77e88dd75e2c44a4fb86f19a66e96a3a, type: 3}
+  completedPieces: 0
+  turnDuration: 0.5
+  turnCooldown: 0.5

@@ -5,9 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class GotoSceneOnInteraction : InteractionObj
 {
-    public int SceneNum;
+    public int sceneNum;
+    public UiManager uiManager;
     public override void ClickFunction()
     {
-        SceneManager.LoadScene(SceneNum);
+        StartCoroutine(uiManager.StartTransition(sceneNum));
     }
 }

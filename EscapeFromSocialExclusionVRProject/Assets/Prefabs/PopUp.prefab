@@ -309,7 +309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a31f366049e32754f9ba681f6e7a4e26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InactiveMaterial: {fileID: 2100000, guid: 923cfb6bbf7ed1f419ba9a60fe187e55, type: 2}
-  GazedAtMaterial: {fileID: 2100000, guid: c766bf04b74219542b5cd3788a92aee3, type: 2}
+  ringSizeOverride: 0.07
+  gazeDurationOverride: 2
   PopUpController: {fileID: 2571580633957099473}
   clickstatus: 0
