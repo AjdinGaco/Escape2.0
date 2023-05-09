@@ -9,6 +9,8 @@ public class ImagePuzzleRotation : RoomPuzzle
     public int columns = 3; // Number of columns in the puzzle
     public float padding = 10f; // Padding between puzzle pieces
     public Sprite image; // Image to use for the puzzle
+    public AudioClip imageTurningSound;
+
     //temp fix, can't seem to make it work :(
     private float scaleSize = 1;
 
@@ -44,6 +46,7 @@ public class ImagePuzzleRotation : RoomPuzzle
                 puzzlePieceObj.transform.SetParent(transform);
                 puzzlePieceObj.AddComponent<ButtonScript>();
                 puzzlePieceObj.GetComponent<ButtonScript>().roomPuzzle = this;
+                puzzlePieceObj.GetComponent<ButtonScript>().interactionSound = imageTurningSound;
                 puzzlePieceObj.AddComponent<BoxCollider>();
                 puzzlePieceObj.GetComponent<BoxCollider>().size = new Vector3(110,110,10);
                 puzzlePieceObj.tag = "Interactable";

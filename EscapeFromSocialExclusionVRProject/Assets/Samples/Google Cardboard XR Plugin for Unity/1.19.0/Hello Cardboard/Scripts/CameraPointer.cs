@@ -18,6 +18,16 @@ public class CameraPointer : MonoBehaviour
     private float _gazeDutationOriginal;
     public bool AutoClickEnabled = true;
 
+    public AudioSource _interactionAudioSource;
+    private void Start()
+    {
+        if (!_interactionAudioSource)
+        {
+            _interactionAudioSource = gameObject.AddComponent<AudioSource>();
+        }
+        
+    }
+
     /// <summary>
     /// Update is called once per frame.
     /// </summary>
@@ -88,6 +98,7 @@ public class CameraPointer : MonoBehaviour
                 if (Time.time - _gazeTime > _gazeDuration)
                 {
                     _gazedAtObject.SendMessage("OnPointerClick");
+                    PlayInteractionSound();
                     _gazing = false;
                     _fillAmount = 0f;
                 }
@@ -96,16 +107,28 @@ public class CameraPointer : MonoBehaviour
             if (_gazing && Input.GetMouseButtonDown(0))
             {
                 _gazedAtObject.SendMessage("OnPointerClick");
+                PlayInteractionSound();
             }
 
             // Checks for screen touches.
             if (Google.XR.Cardboard.Api.IsTriggerPressed)
             {
                 _gazedAtObject?.SendMessage("OnPointerClick");
+                PlayInteractionSound();
             }
         }
     }
-
+    private void PlayInteractionSound()
+    {
+        if (_gazedAtObject != null && _gazedAtObject.GetComponent<InteractionObj>() != null)
+        {
+            var interactionSound = _gazedAtObject.GetComponent<InteractionObj>().interactionSound;
+            if (interactionSound != null)
+            {
+                _interactionAudioSource.PlayOneShot(interactionSound);
+            }
+        }
+    }
     /// <summary>
     /// Creates a ring based on the size of the object being gazed at.
     /// </summary>
