@@ -2865,7 +2865,7 @@ PrefabInstance:
     - target: {fileID: 4900534346165812675, guid: 17d2ce17fbcbe004fa5b3ce3a1988aaf, type: 3}
       propertyPath: image
       value: 
-      objectReference: {fileID: 21300000, guid: 82ce942483e60ec419b181cdfe0f2caa, type: 3}
+      objectReference: {fileID: 21300000, guid: 232f5e5b6845e604c92ca08d1026d8be, type: 3}
     - target: {fileID: 4900534346165812675, guid: 17d2ce17fbcbe004fa5b3ce3a1988aaf, type: 3}
       propertyPath: roomDirector
       value: 
@@ -2874,6 +2874,10 @@ PrefabInstance:
       propertyPath: imageTurningSound
       value: 
       objectReference: {fileID: 8300000, guid: 47d2496dde827a2469efb7d849235e28, type: 3}
+    - target: {fileID: 4900534346165812675, guid: 17d2ce17fbcbe004fa5b3ce3a1988aaf, type: 3}
+      propertyPath: puzzleCompletionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 14f3ce8bcf3eb1a49921d9a6ea2c6237, type: 3}
     - target: {fileID: 4900534346165812687, guid: 17d2ce17fbcbe004fa5b3ce3a1988aaf, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3385,6 +3389,10 @@ PrefabInstance:
       propertyPath: roomDirector
       value: 
       objectReference: {fileID: 495909682}
+    - target: {fileID: 1420000055647917843, guid: 2fb0ac9cccc7dfa4aa27721d87d16c74, type: 3}
+      propertyPath: puzzleCompletionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 14f3ce8bcf3eb1a49921d9a6ea2c6237, type: 3}
     - target: {fileID: 1420000055647917843, guid: 2fb0ac9cccc7dfa4aa27721d87d16c74, type: 3}
       propertyPath: importantWords.Array.size
       value: 4
@@ -4769,6 +4777,10 @@ PrefabInstance:
       propertyPath: uiManager
       value: 
       objectReference: {fileID: 152410921}
+    - target: {fileID: 4255821806179972864, guid: cd2a8b89c0bc7cc45af5e67920203b06, type: 3}
+      propertyPath: interactionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 4d4f341951080354d8a9f8fdbda2b2e2, type: 3}
     - target: {fileID: 5235406988226490174, guid: cd2a8b89c0bc7cc45af5e67920203b06, type: 3}
       propertyPath: m_Name
       value: GazeMarker Bed
@@ -6718,6 +6730,10 @@ PrefabInstance:
       propertyPath: uiManager
       value: 
       objectReference: {fileID: 152410921}
+    - target: {fileID: 4255821806179972864, guid: cd2a8b89c0bc7cc45af5e67920203b06, type: 3}
+      propertyPath: interactionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 4d4f341951080354d8a9f8fdbda2b2e2, type: 3}
     - target: {fileID: 5235406988226490174, guid: cd2a8b89c0bc7cc45af5e67920203b06, type: 3}
       propertyPath: m_Name
       value: GazeMarker Dresser
@@ -7909,6 +7925,10 @@ PrefabInstance:
       propertyPath: uiManager
       value: 
       objectReference: {fileID: 152410921}
+    - target: {fileID: 4255821806179972864, guid: cd2a8b89c0bc7cc45af5e67920203b06, type: 3}
+      propertyPath: interactionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 4d4f341951080354d8a9f8fdbda2b2e2, type: 3}
     - target: {fileID: 5235406988226490174, guid: cd2a8b89c0bc7cc45af5e67920203b06, type: 3}
       propertyPath: m_Name
       value: GazeMarker Window
@@ -12313,6 +12333,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1374399048270799943, guid: d7f90cf8a0a88624e9274e331bb559fd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5714029718380400511, guid: d7f90cf8a0a88624e9274e331bb559fd, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8365325654179650888, guid: d7f90cf8a0a88624e9274e331bb559fd, type: 3}
       propertyPath: m_Name
       value: DressUpPuzzle
@@ -12389,6 +12417,10 @@ PrefabInstance:
       propertyPath: roomDirector
       value: 
       objectReference: {fileID: 495909682}
+    - target: {fileID: 9202943015014763486, guid: d7f90cf8a0a88624e9274e331bb559fd, type: 3}
+      propertyPath: puzzleCompletionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 14f3ce8bcf3eb1a49921d9a6ea2c6237, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7f90cf8a0a88624e9274e331bb559fd, type: 3}
 --- !u!4 &9216167702994766568 stripped

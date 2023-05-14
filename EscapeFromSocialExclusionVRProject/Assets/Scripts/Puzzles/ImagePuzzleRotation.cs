@@ -133,7 +133,7 @@ public class ImagePuzzleRotation : RoomPuzzle
                 completedPieces++;
                 if (completedPieces >= puzzlepieces.Count)
                 {
-                    completion = true;
+                    PuzzleDone();
                     foreach (GameObject gameObject in puzzlepieces)
                     {
                         gameObject.GetComponent<Collider>().enabled = false;

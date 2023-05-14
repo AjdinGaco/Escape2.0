@@ -70,7 +70,7 @@ public class Room1WordSearch : RoomPuzzle
 
 
             if (buttonAid.clickstatus && buttonHumanitarian.clickstatus && buttonAdvocacy.clickstatus && buttonRehabilitation.clickstatus && buttonDisability.clickstatus && buttonInclusion.clickstatus)
-                completion = true;
+                PuzzleDone();
         }
 
     }

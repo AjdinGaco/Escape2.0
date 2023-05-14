@@ -85,7 +85,7 @@ public class WordPuzzleSearch : RoomPuzzle
 
         if (importantWordsObj.Count == 0)
         {
-            completion = true;
+            PuzzleDone();
             StartCoroutine(FadeOutNonImportantWords());
         }
     }

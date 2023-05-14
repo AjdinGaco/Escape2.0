@@ -501,6 +501,8 @@ MonoBehaviour:
   interactionSound: {fileID: 8300000, guid: 4e1e5997703b296439894c19862fa820, type: 3}
   GameObjectToEnable: {fileID: 1889371444}
   DestroyOnClick: 1
+  makeSoundUntillInteractedWith: 0
+  _interactionAudioSource: {fileID: 0}
 --- !u!114 &1270653804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -658,6 +660,8 @@ MonoBehaviour:
   interactionSound: {fileID: 8300000, guid: 4e1e5997703b296439894c19862fa820, type: 3}
   GameObjectToEnable: {fileID: 1270653798}
   DestroyOnClick: 1
+  makeSoundUntillInteractedWith: 0
+  _interactionAudioSource: {fileID: 0}
 --- !u!114 &1651493950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -965,6 +969,8 @@ MonoBehaviour:
   interactionSound: {fileID: 8300000, guid: 4e1e5997703b296439894c19862fa820, type: 3}
   GameObjectToEnable: {fileID: 1607957535}
   DestroyOnClick: 1
+  makeSoundUntillInteractedWith: 0
+  _interactionAudioSource: {fileID: 0}
 --- !u!114 &1889371450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5842,11 +5848,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a5dd73763d6a5ea458ba5d4fb8417107, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.4
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
