@@ -9,6 +9,7 @@ public class GotoSceneOnInteraction : InteractionObj
     public UiManager uiManager;
     public override void ClickFunction()
     {
+        this.gameObject.tag = "Untagged";
         StartCoroutine(uiManager.StartTransition(sceneNum));
     }
 }
