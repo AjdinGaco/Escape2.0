@@ -2099,9 +2099,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5459699429253358019, guid: 10629c6413546ed40818de95032bdc89, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5459699429253358019, guid: 10629c6413546ed40818de95032bdc89, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5459699429253358019, guid: 10629c6413546ed40818de95032bdc89, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5459699429253358019, guid: 10629c6413546ed40818de95032bdc89, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6213762486102804269, guid: 10629c6413546ed40818de95032bdc89, type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7718349081022905157, guid: 10629c6413546ed40818de95032bdc89, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9107838697488897379, guid: 10629c6413546ed40818de95032bdc89, type: 3}
       propertyPath: m_Enabled
@@ -2707,7 +2727,6 @@ MonoBehaviour:
   objectsToEnableOnStart: []
   objectsToDisableOnEnd: []
   roomPuzzle: {fileID: 1553293483}
-  puzzleCompletionLight: {fileID: 717827323}
 --- !u!114 &495909689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2724,7 +2743,6 @@ MonoBehaviour:
   objectsToEnableOnStart: []
   objectsToDisableOnEnd: []
   roomPuzzle: {fileID: 924250949}
-  puzzleCompletionLight: {fileID: 2144618426}
 --- !u!114 &495909695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2741,7 +2759,6 @@ MonoBehaviour:
   objectsToEnableOnStart: []
   objectsToDisableOnEnd: []
   roomPuzzle: {fileID: 860747103485908913}
-  puzzleCompletionLight: {fileID: 1388321399}
 --- !u!114 &495909696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2874,6 +2891,10 @@ PrefabInstance:
       propertyPath: imageTurningSound
       value: 
       objectReference: {fileID: 8300000, guid: 47d2496dde827a2469efb7d849235e28, type: 3}
+    - target: {fileID: 4900534346165812675, guid: 17d2ce17fbcbe004fa5b3ce3a1988aaf, type: 3}
+      propertyPath: puzzleCompletionLight
+      value: 
+      objectReference: {fileID: 717827323}
     - target: {fileID: 4900534346165812675, guid: 17d2ce17fbcbe004fa5b3ce3a1988aaf, type: 3}
       propertyPath: puzzleCompletionSound
       value: 
@@ -3389,6 +3410,10 @@ PrefabInstance:
       propertyPath: roomDirector
       value: 
       objectReference: {fileID: 495909682}
+    - target: {fileID: 1420000055647917843, guid: 2fb0ac9cccc7dfa4aa27721d87d16c74, type: 3}
+      propertyPath: puzzleCompletionLight
+      value: 
+      objectReference: {fileID: 2144618426}
     - target: {fileID: 1420000055647917843, guid: 2fb0ac9cccc7dfa4aa27721d87d16c74, type: 3}
       propertyPath: puzzleCompletionSound
       value: 
@@ -10439,6 +10464,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1753955851246280489, guid: a30a1848c63e8504eade6a510775e9d2, type: 3}
   m_PrefabInstance: {fileID: 1856485668}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1872671818
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1872671820}
+  - component: {fileID: 1872671819}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1872671819
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872671818}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6222643, y: 3.47552, z: 1}
+  m_Center: {x: -0.31113225, y: 1.23776, z: 0}
+--- !u!4 &1872671820
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872671818}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.157, y: 0, z: -0.612}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1880522301 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4115255726725816, guid: b2ba957224087475eb7804e492ea272e, type: 3}
@@ -12417,6 +12487,10 @@ PrefabInstance:
       propertyPath: roomDirector
       value: 
       objectReference: {fileID: 495909682}
+    - target: {fileID: 9202943015014763486, guid: d7f90cf8a0a88624e9274e331bb559fd, type: 3}
+      propertyPath: puzzleCompletionLight
+      value: 
+      objectReference: {fileID: 1388321399}
     - target: {fileID: 9202943015014763486, guid: d7f90cf8a0a88624e9274e331bb559fd, type: 3}
       propertyPath: puzzleCompletionSound
       value: 

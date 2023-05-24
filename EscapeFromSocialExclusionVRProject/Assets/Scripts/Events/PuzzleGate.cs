@@ -5,7 +5,6 @@ using UnityEngine;
 public class PuzzleGate : RoomEvent
 {
     public RoomPuzzle roomPuzzle;
-    public Light puzzleCompletionLight;
     public override void OnStart()
     {
     }
@@ -14,7 +13,6 @@ public class PuzzleGate : RoomEvent
         if (roomPuzzle.completion)
         {
             isConditionMet = true;
-            puzzleCompletionLight.color = Color.green;
         } 
     }
 }

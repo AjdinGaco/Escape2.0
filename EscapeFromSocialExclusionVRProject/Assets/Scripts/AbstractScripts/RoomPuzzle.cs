@@ -8,6 +8,7 @@ public class RoomPuzzle : MonoBehaviour
     public RoomDirector roomDirector;
     public bool completion = false;
     public AudioClip puzzleCompletionSound;
+    public Light puzzleCompletionLight;
     public virtual void Clicked()
     {
 
@@ -16,7 +17,12 @@ public class RoomPuzzle : MonoBehaviour
     public void PuzzleDone()
     {
         if (puzzleCompletionSound)
-             AudioSource.PlayClipAtPoint(puzzleCompletionSound, transform.position);
+        {
+            AudioSource.PlayClipAtPoint(puzzleCompletionSound, transform.position);
+            if (puzzleCompletionLight)
+                puzzleCompletionLight.color = Color.green;
+        }
+             
         completion = true;
     }
 }
