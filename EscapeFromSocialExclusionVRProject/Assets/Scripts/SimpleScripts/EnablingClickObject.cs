@@ -9,6 +9,7 @@ public class EnablingClickObject : InteractionObj
 
     public bool makeSoundUntillInteractedWith = false;
     private bool interacted = false;
+    public InteractGate InteractGate;
     public override void ClickFunction()
     {
         if (GameObjectToEnable.active)
@@ -24,6 +25,10 @@ public class EnablingClickObject : InteractionObj
         {
             interacted = true;
             _interactionAudioSource.Stop();
+            if (InteractGate)
+            {
+                InteractGate.InteractionDone();
+            }
         }
     }
 

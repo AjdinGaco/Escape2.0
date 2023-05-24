@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class InteractGate : RoomEvent
 {
-    public class AnimationGate : RoomEvent
+    public void InteractionDone()
     {
-        public override void OnStart()
-        {
-        }
+        isConditionMet = true;
     }
 }
