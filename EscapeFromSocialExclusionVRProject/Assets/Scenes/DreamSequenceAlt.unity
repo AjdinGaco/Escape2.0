@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.631791, g: 0.8136774, b: 0.8483098, a: 1}
+  m_IndirectSpecularColor: {r: 0.6334119, g: 0.81240445, b: 0.8472736, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1605,16 +1605,16 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.7783019, g: 1, b: 0.9445755, a: 0.79117644}
-        key1: {r: 1, g: 1, b: 1, a: 1}
+        key0: {r: 0.13207841, g: 1, b: 0, a: 0.78431374}
+        key1: {r: 0, g: 1, b: 0.57264996, a: 0}
         key2: {r: 0, g: 0.011662006, b: 1, a: 0}
         key3: {r: 1, g: 0.039030913, b: 0.87625194, a: 1}
         key4: {r: 1, g: 0.80423534, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
-        ctime0: 19275
-        ctime1: 65535
+        ctime0: 0
+        ctime1: 15227
         ctime2: 31611
         ctime3: 51272
         ctime4: 65535
@@ -1622,7 +1622,7 @@ ParticleSystem:
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 6554
+        atime1: 65535
         atime2: 65535
         atime3: 65535
         atime4: 0
@@ -1630,8 +1630,8 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
-        m_NumColorKeys: 2
-        m_NumAlphaKeys: 3
+        m_NumColorKeys: 5
+        m_NumAlphaKeys: 2
       minGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -5314,6 +5314,7 @@ MonoBehaviour:
   GameObjectToEnable: {fileID: 1889371444}
   DestroyOnClick: 1
   makeSoundUntillInteractedWith: 0
+  InteractGate: {fileID: 0}
   _interactionAudioSource: {fileID: 0}
 --- !u!114 &1270653804
 MonoBehaviour:
@@ -5434,7 +5435,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ringSizeOverride: 0
   gazeDurationOverride: 2
-  interactionSound: {fileID: 0}
+  interactionSound: {fileID: 8300000, guid: 4e1e5997703b296439894c19862fa820, type: 3}
   sceneNum: 1
   uiManager: {fileID: 1963840712}
 --- !u!114 &1607957537
@@ -5473,6 +5474,7 @@ MonoBehaviour:
   GameObjectToEnable: {fileID: 1270653798}
   DestroyOnClick: 1
   makeSoundUntillInteractedWith: 0
+  InteractGate: {fileID: 0}
   _interactionAudioSource: {fileID: 0}
 --- !u!114 &1651493950
 MonoBehaviour:
@@ -5782,6 +5784,7 @@ MonoBehaviour:
   GameObjectToEnable: {fileID: 1607957535}
   DestroyOnClick: 1
   makeSoundUntillInteractedWith: 0
+  InteractGate: {fileID: 0}
   _interactionAudioSource: {fileID: 0}
 --- !u!114 &1889371450
 MonoBehaviour:
@@ -10768,6 +10771,106 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 151057719114016742, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
+      propertyPath: prewarm
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 151057719114016742, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 151057719114016742, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 151057719114016742, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.atime1
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 151057719114016742, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.ctime1
+      value: 15227
+      objectReference: {fileID: 0}
+    - target: {fileID: 151057719114016742, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.ctime2
+      value: 31611
+      objectReference: {fileID: 0}
+    - target: {fileID: 151057719114016742, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.ctime3
+      value: 51272
+      objectReference: {fileID: 0}
+    - target: {fileID: 151057719114016742, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.a
+      value: 0.78431374
+      objectReference: {fileID: 0}
+    - target: {fileID: 151057719114016742, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 151057719114016742, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 151057719114016742, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.r
+      value: 0.13207841
+      objectReference: {fileID: 0}
+    - target: {fileID: 151057719114016742, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 151057719114016742, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.b
+      value: 0.57264996
+      objectReference: {fileID: 0}
+    - target: {fileID: 151057719114016742, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 151057719114016742, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 151057719114016742, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key2.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 151057719114016742, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key2.g
+      value: 0.011662006
+      objectReference: {fileID: 0}
+    - target: {fileID: 151057719114016742, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key2.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 151057719114016742, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key3.b
+      value: 0.87625194
+      objectReference: {fileID: 0}
+    - target: {fileID: 151057719114016742, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key3.g
+      value: 0.039030913
+      objectReference: {fileID: 0}
+    - target: {fileID: 151057719114016742, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key3.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 151057719114016742, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key4.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 151057719114016742, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key4.g
+      value: 0.80423534
+      objectReference: {fileID: 0}
+    - target: {fileID: 151057719114016742, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key4.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 151057719114016742, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.m_NumColorKeys
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 984933797425258134, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
       propertyPath: m_Name
       value: Bubble
