@@ -11,9 +11,6 @@ public class PlayerController : MonoBehaviour
     private Vector3 movement;
     public CameraPointer CameraPointer;
 
-    [Tooltip("This should be the parent of all teleporting gaze markers. Only used with Gaze based gameplay")]
-    public GameObject _gazeHelpers;
-
     private int platform;
     // Start is called before the first frame update
     void Start()
@@ -28,12 +25,7 @@ public class PlayerController : MonoBehaviour
         if (platform == 2)
         {
             characterController.enabled = false;
-            _gazeHelpers.active = true;
             CameraPointer.AutoClickEnabled = true;
-        }
-        else
-        {
-            _gazeHelpers.active = false;
         }
             
     }
