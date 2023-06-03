@@ -10,6 +10,7 @@ public class BrailePuzzle : RoomPuzzle
     public GameObject centralBraileText;
     public List<GameObject> choices;
     public BlindnessManager blindnessManager;
+    public GameObject poster0 ,poster1, poster2, poster3;
 
     public AudioClip audioCorrect, audioWrong;
     public List<String> incorrectChoices;
@@ -82,13 +83,20 @@ public class BrailePuzzle : RoomPuzzle
                         case (0):
                             blindnessManager.ChangeVisionDisabilities(VisionDisabilities.Glaucoma);
                             rightchoice = "DiabeticRetinopathy";
+                            poster0.gameObject.SetActive(false);
+                            poster1.gameObject.SetActive(true);
+
                             break;
                         case (1):
                             blindnessManager.ChangeVisionDisabilities(VisionDisabilities.DiabeticRetinopathy);
+                            poster1.gameObject.SetActive(false);
+                            poster2.gameObject.SetActive(true);
                             rightchoice = "Cataracts";
                             break;
                         case (2):
                             blindnessManager.ChangeVisionDisabilities(VisionDisabilities.Cataracts);
+                            poster2.gameObject.SetActive(false);
+                            poster3.gameObject.SetActive(true);
                             rightchoice = "MacularDegeneration";
                             break;
                         case (3):
