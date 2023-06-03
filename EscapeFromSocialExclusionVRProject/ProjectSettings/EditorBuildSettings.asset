@@ -5,14 +5,17 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/DreamSequenceAlt.unity
     guid: ff4287ad903d6e94ebb4e5f0c8b9ea93
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/RoomDisability.unity
     guid: c027906a0b8eca24ebc927663318070b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/END.unity
     guid: baeefc4cecbddb14790876e0b73f4723
+  - enabled: 1
+    path: Assets/Scenes/RoomBlindness.unity
+    guid: 3bba518f93e19f646bcf252f442ea65f
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: bd70340b811d27348a9ba21be6e8a995, type: 2}

@@ -7,7 +7,7 @@ public class BlindnessManager : MonoBehaviour
 {
     public Image EffectsCanvas;
     public VisionDisabilities currentActive;
-    public Sprite CataractsSprite, DiabeticRetinopathySprite, GlaucomaSprite, MacularDegenerationSprite;
+    public Sprite None,CataractsSprite, DiabeticRetinopathySprite, GlaucomaSprite, MacularDegenerationSprite;
 
     public void ChangeVisionDisabilities(VisionDisabilities visionDisability)
     {
@@ -15,7 +15,7 @@ public class BlindnessManager : MonoBehaviour
         switch (visionDisability)
         {
             case VisionDisabilities.None:
-                EffectsCanvas.sprite = null;
+                EffectsCanvas.sprite = None;
                 break;
             case VisionDisabilities.Cataracts:
                 EffectsCanvas.sprite = CataractsSprite;
