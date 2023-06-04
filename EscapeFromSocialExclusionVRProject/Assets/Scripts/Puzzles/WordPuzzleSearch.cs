@@ -120,6 +120,7 @@ public class WordPuzzleSearch : RoomPuzzle
 
         // Remove non-important words from scene and list
         foreach (GameObject wordObj in nonImportantWordsObj)
+
         {
             unimportantWordsObj.Remove(wordObj);
             Destroy(wordObj);
