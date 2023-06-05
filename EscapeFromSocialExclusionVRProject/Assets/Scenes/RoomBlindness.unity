@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.11269018, g: 0.2815683, b: 0.7091809, a: 1}
+  m_IndirectSpecularColor: {r: 0.11266579, g: 0.28154442, b: 0.7091836, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2336,14 +2336,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 486884906}
-  m_LocalRotation: {x: -0.0061727166, y: -0.70708007, z: 0.70707977, w: -0.006168723}
-  m_LocalPosition: {x: 2.6550002, y: 2.049, z: 18.661}
-  m_LocalScale: {x: 0.100000076, y: 1, z: 0.13410005}
+  m_LocalRotation: {x: 0.49998122, y: -0.0043624374, z: 0.007561434, w: 0.8659923}
+  m_LocalPosition: {x: 2.6550002, y: 1.299, z: 14.160999}
+  m_LocalScale: {x: 0.061863046, y: 0.72615, z: 0.06789217}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 181}
+  m_LocalEulerAnglesHint: {x: 60, y: 0.001, z: 1.001}
 --- !u!1001 &489403255
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4221,7 +4221,7 @@ MonoBehaviour:
   - {fileID: 966170021}
   - {fileID: 1740157745}
   visibleCode: {fileID: 1509915310}
-  correctCode: 6853
+  correctCode: 3568
   audioWrong: {fileID: 8300000, guid: 9fb8b60c2b9f1e84aa12f447da69c615, type: 3}
   codeEntered: 
 --- !u!224 &1173415353
@@ -6087,7 +6087,7 @@ MonoBehaviour:
   ScreenImage: {fileID: 1456566592}
   foundObjectSound: {fileID: 8300000, guid: 17217f083fc026b4f8061bba797879a6, type: 3}
   BlindnessManager: {fileID: 137153826}
-  stage: 0
+  stage: 3
 --- !u!1001 &1689449969
 PrefabInstance:
   m_ObjectHideFlags: 0
