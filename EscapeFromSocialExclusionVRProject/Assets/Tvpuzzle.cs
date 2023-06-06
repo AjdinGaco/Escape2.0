@@ -49,27 +49,26 @@ public class Tvpuzzle : RoomPuzzle
                 switch (stage)
                 {
                     case (0):
+                        stage = 1;
                         BlindnessManager.ChangeVisionDisabilities(VisionDisabilities.Cataracts);
                         CurrentObjToFind = ObjectToFind2;
                         NextObj(CurrentObjToFind);
                         ScreenImage.GetComponent<Image>().sprite = ObjectToFind2Sprite;
-                        stage = 1;
                         break;
                     case (1):
+                        stage = 2;
                         BlindnessManager.ChangeVisionDisabilities(VisionDisabilities.MacularDegeneration);
                         CurrentObjToFind = ObjectToFind3;
                         NextObj(CurrentObjToFind);
                         ScreenImage.GetComponent<Image>().sprite = ObjectToFind3Sprite;
-                        stage = 2;
                         break;
                     case (2):
-                        completion = true;
+                        PuzzleDone();
+                        stage = 3;
                         CurrentObjToFind = null;
                         RemoteObj.gameObject.tag = "Interactable";
                         ScreenImage.gameObject.SetActive(false);
                         NextObj(null);
-                        stage = 3;
-                        PuzzleDone();
                         break;
                 }
             }

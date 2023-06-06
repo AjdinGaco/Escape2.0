@@ -101,7 +101,12 @@ public class BrailePuzzle : RoomPuzzle
                             break;
                         case (3):
                             blindnessManager.ChangeVisionDisabilities(VisionDisabilities.MacularDegeneration);
-                            this.gameObject.active = false;
+                            this.gameObject.SetActive(false);
+                            PuzzleDone();
+                            break;
+                        default:
+                            blindnessManager.ChangeVisionDisabilities(VisionDisabilities.None);
+                            PuzzleDone();
                             break;
 
                     }
