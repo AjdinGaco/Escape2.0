@@ -2042,7 +2042,7 @@ MonoBehaviour:
   ringSizeOverride: 0
   gazeDurationOverride: 2
   interactionSound: {fileID: 0}
-  sceneNum: 3
+  sceneNum: 4
   uiManager: {fileID: 137153828}
 --- !u!65 &283841891
 BoxCollider:

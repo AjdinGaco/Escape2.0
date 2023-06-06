@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.6334119, g: 0.81240445, b: 0.8472736, a: 1}
+  m_IndirectSpecularColor: {r: 0.631791, g: 0.8136774, b: 0.8483098, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5239,11 +5239,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1199877604637985248, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.56
+      value: 3.31
       objectReference: {fileID: 0}
     - target: {fileID: 1199877604637985248, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.4
+      value: 11.36
       objectReference: {fileID: 0}
     - target: {fileID: 1199877604637985248, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5355,11 +5355,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1199877604637985248, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.2
+      value: 2.23
       objectReference: {fileID: 0}
     - target: {fileID: 1199877604637985248, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.87
+      value: 4.42
       objectReference: {fileID: 0}
     - target: {fileID: 1199877604637985248, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5396,7 +5396,7 @@ PrefabInstance:
     - target: {fileID: 8183960697812846067, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 190964580c9ee5f4e98bbbff7b37db57, type: 3}
+      objectReference: {fileID: 21300000, guid: 651734f2a9cd7044eb3cf869f2267631, type: 3}
     - target: {fileID: 8482033294567195661, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
       propertyPath: SceneNum
       value: 1
@@ -5436,7 +5436,7 @@ MonoBehaviour:
   ringSizeOverride: 0
   gazeDurationOverride: 2
   interactionSound: {fileID: 8300000, guid: 4e1e5997703b296439894c19862fa820, type: 3}
-  sceneNum: 1
+  sceneNum: 3
   uiManager: {fileID: 1963840712}
 --- !u!114 &1607957537
 MonoBehaviour:
@@ -5705,11 +5705,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1199877604637985248, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.59
+      value: -3.56
       objectReference: {fileID: 0}
     - target: {fileID: 1199877604637985248, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.66
+      value: 13.42
       objectReference: {fileID: 0}
     - target: {fileID: 1199877604637985248, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6457,7 +6457,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 30
+    maxNumParticles: 50
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -10881,11 +10881,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1199877604637985248, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.559999
+      value: -18.87
       objectReference: {fileID: 0}
     - target: {fileID: 1199877604637985248, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.53
+      value: 4.51
       objectReference: {fileID: 0}
     - target: {fileID: 1199877604637985248, guid: 8b0a9b22ed92f50409ee08df28959642, type: 3}
       propertyPath: m_LocalPosition.z
