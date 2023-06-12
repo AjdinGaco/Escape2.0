@@ -9,6 +9,7 @@ public class RoomPuzzle : MonoBehaviour
     public bool completion = false;
     public AudioClip puzzleCompletionSound;
     public Light puzzleCompletionLight;
+
     public virtual void Clicked()
     {
 
@@ -22,7 +23,15 @@ public class RoomPuzzle : MonoBehaviour
             if (puzzleCompletionLight)
                 puzzleCompletionLight.color = Color.green;
         }
-             
+
         completion = true;
+
+        // Disable the game object after 5 seconds
+        Invoke("DisablePuzzleGameObject", 5f);
+    }
+
+    private void DisablePuzzleGameObject()
+    {
+        gameObject.SetActive(false);
     }
 }
