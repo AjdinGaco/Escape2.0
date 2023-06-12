@@ -3,6 +3,10 @@ using UnityEngine;
 
 public abstract class RoomEvent : MonoBehaviour
 {
+
+    /// <summary>
+    /// This is an important aspect of the room events.
+    /// </summary>
     [SerializeField] protected Sprite sprite;
     [SerializeField] protected List<GameObject> objectsToEnableOnStart = new List<GameObject>();
     [SerializeField] protected List<GameObject> objectsToDisableOnEnd = new List<GameObject>();
