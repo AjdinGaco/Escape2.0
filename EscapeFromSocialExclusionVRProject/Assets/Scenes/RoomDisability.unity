@@ -11675,6 +11675,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 495909682}
     - target: {fileID: 9202943015014763486, guid: d7f90cf8a0a88624e9274e331bb559fd, type: 3}
+      propertyPath: disableOnCompletion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202943015014763486, guid: d7f90cf8a0a88624e9274e331bb559fd, type: 3}
       propertyPath: puzzleCompletionLight
       value: 
       objectReference: {fileID: 1388321399}

@@ -25,11 +25,13 @@ public class RoomPuzzle : MonoBehaviour
         }
 
         completion = true;
-
-        // Disable the game object after 5 seconds
-        Invoke("DisablePuzzleGameObject", 5f);
+		if (disableOnCompletion){
+			// Disable the game object after 5 seconds
+			Invoke("DisablePuzzleGameObject", 5f);
+		}
+        
     }
-
+	public bool disableOnCompletion = true;
     private void DisablePuzzleGameObject()
     {
         gameObject.SetActive(false);
