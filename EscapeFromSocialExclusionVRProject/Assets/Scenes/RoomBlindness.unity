@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.36287373, g: 0.56617594, b: 0.8437104, a: 1}
+  m_IndirectSpecularColor: {r: 0.36299065, g: 0.5661923, b: 0.8437077, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -984,6 +984,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42b0ef05a47883e42adb99a8805153b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &137153829 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2634608125913854375, guid: 10629c6413546ed40818de95032bdc89, type: 3}
+  m_PrefabInstance: {fileID: 137153824}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &140822035
 GameObject:
   m_ObjectHideFlags: 0
@@ -3517,7 +3522,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3112867370740676602, guid: 93903fac38405d94381bff9993d61f64, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3112867370740676602, guid: 93903fac38405d94381bff9993d61f64, type: 3}
       propertyPath: m_LocalScale.x
@@ -4663,9 +4668,9 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.5943396, g: 0.5943396, b: 0.5943396, a: 1}
+  m_Color: {r: 0.6886792, g: 0.6534934, b: 0.5631377, a: 1}
   m_Intensity: 1
-  m_Range: 50
+  m_Range: 25
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -4721,13 +4726,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1075256411}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 2.723, y: 2.438, z: 16.117}
+  m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_Father: {fileID: 137153829}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1100095952
 GameObject:
