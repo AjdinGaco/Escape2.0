@@ -83,7 +83,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &4900534346165812672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,10 +115,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomDirector: {fileID: 0}
   completion: 0
+  puzzleCompletionSound: {fileID: 0}
+  puzzleCompletionLight: {fileID: 0}
+  disableOnCompletion: 1
   rows: 3
   columns: 3
   padding: 0
   image: {fileID: 21300000, guid: 77e88dd75e2c44a4fb86f19a66e96a3a, type: 3}
+  imageTurningSound: {fileID: 0}
   completedPieces: 0
   turnDuration: 0.5
   turnCooldown: 0.5
