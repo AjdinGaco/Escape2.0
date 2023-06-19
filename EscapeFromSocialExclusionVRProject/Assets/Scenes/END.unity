@@ -232,8 +232,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 14.09, y: -0.3}
-  m_SizeDelta: {x: 321.56, y: 66.709}
+  m_AnchoredPosition: {x: 18.651, y: -3.288}
+  m_SizeDelta: {x: 308.109, y: 152.071}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &181234646
 MonoBehaviour:
@@ -268,9 +268,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "EPS team 2023\nGa\u010Do Ajdin [IT guy] \nGoossens Wiebe [Creative one]\nThorat
-    Deepti [Ui designer]\nMunguci Gloria [Fantastic one]\nValova Katerina [Positive
-    one]"
+  m_text: "EPS team 2023\r\nGaco Ajdin [ICT] \r\nGoossens Wiebe [Occupational Therapy]\r\nThorat
+    Deepti [Graphic and Digital Media]\r\nMunguci Gloria [ICT]\r\nValova Katerina
+    [Tourism]"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
